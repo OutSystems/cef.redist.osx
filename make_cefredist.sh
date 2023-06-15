@@ -1,7 +1,7 @@
 TMP="tmp-$1"
-OUTPUT="../package/cef.redist.$1"
+OUTPUT="../package-$1"
 
-if [ $1 -eq "osx64" ]; then 
+if [ "$1" == "osx64" ]; then 
     DOWNLOAD_URL="https://cef-builds.spotifycdn.com/cef_binary_112.3.0%2Bgb09c4ca%2Bchromium-112.0.5615.165_macosx64_minimal.tar.bz2"; else
     DOWNLOAD_URL="https://cef-builds.spotifycdn.com/cef_binary_112.3.0%2Bgb09c4ca%2Bchromium-112.0.5615.165_macosarm64_minimal.tar.bz2";
 fi
