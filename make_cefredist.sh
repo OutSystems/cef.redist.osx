@@ -1,5 +1,11 @@
-TMP="tmp"
-OUTPUT="../package"
+TMP="tmp-$1"
+OUTPUT="../package-$1"
+
+if [ "$1" == "osx64" ]; then 
+    ARCH="macosx64";
+else
+    ARCH="macosarm64";
+fi
 
 if [ ! -d "$TMP" ]; then
     mkdir "$TMP"
@@ -16,7 +22,7 @@ CEFZIP="cef.tar.bz2"
 CEFBINARIES="cef_binaries"
 if [ ! -f "$CEFZIP" ]; then
     echo "downloading cef binaries"
-    curl -o "$CEFZIP" "https://cef-builds.spotifycdn.com/cef_binary_112.3.0%2Bgb09c4ca%2Bchromium-112.0.5615.165_macosx64_minimal.tar.bz2"
+    curl -o "$CEFZIP" "https://cef-builds.spotifycdn.com/cef_binary_112.3.0%2Bgb09c4ca%2Bchromium-112.0.5615.165_$ARCH_minimal.tar.bz2"
 fi
 
 if [ ! -d "$CEFBINARIES" ]; then
