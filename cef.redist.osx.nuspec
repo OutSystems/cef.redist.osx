@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>cef.redist.osx64</id>
+    <id>cef.redist.$name$</id>
     <version>$version$</version>
     <authors>The Chromium Embedded Framework Authors</authors>
     <owners></owners>
@@ -12,8 +12,8 @@
     <license type="file">LICENSE.txt</license>
   </metadata>
   <files>
-    <file src="package/**" />
-    <file src="build/**" target="build/" />
+    <file src="package/cef.redist.$name$/**" target="package/" />
+    <file src="build/cef.redist.$name$.props" target="build/" />
     <file src="LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>
