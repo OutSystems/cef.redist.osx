@@ -23,7 +23,7 @@ CEFBINARIES="cef_binaries"
 
 if [ ! -f "$CEFZIP" ]; then
     echo "downloading cef binaries"
-    curl -o "$CEFZIP" "https://cef-builds.spotifycdn.com/cef_binary_134.3.9%2Bg5dc6f2f%2Bchromium-134.0.6998.178_{$ARCH}_minimal.tar.bz2"
+    curl -o "$CEFZIP" "https://cef-builds.spotifycdn.com/cef_binary_121.3.13%2Bg5c4a81b%2Bchromium-121.0.6167.184_{$ARCH}_minimal.tar.bz2"
 fi
 
 if [ ! -d "$CEFBINARIES" ]; then
